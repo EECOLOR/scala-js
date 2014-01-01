@@ -8,14 +8,14 @@
 package scala.scalajs.test
 package jsinterop
 
-import scala.scalajs.test.ScalaJSTest
 import scala.scalajs.runtime.Long
+import org.scalajs.jasmine.JasmineExpectation
 
 /**
  * test the runtime Long implementation directly
  * does not depend on magic compiler Long rewriting
  */
-object RuntimeLongTest extends ScalaJSTest {
+object RuntimeLongTest extends JasmineTest {
 
   /** overload expect for long to add toString */
   def expect(l: Long): JasmineExpectation = expect(l.toHexString)
